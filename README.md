@@ -33,12 +33,12 @@ TDCgui3.mlapp - MATLAB App Designer graphical user interface application.
 *figs*\
 Various figures and schematics of the TDC design.
 
-**2-channel TDC system example project**\
-1. Open Vivado
-2. Using the Tcl Console, navigate to the "zynq_tdc" folder and execute "source make_project.tcl"
+**2-channel TDC system example project**
+1. Open Vivado 2018.2
+2. Using the Tcl Console, navigate to the "zynq_tdc/" folder and execute "source make_project.tcl"
 3. Complete the synthesis & implementation steps
 
-**Setup on the Red Pitaya**\
+**Setup on the Red Pitaya**
 1. Copy the generated bitstream, PLclock script and C server on the Red Pitaya system
 2. Run PLclock ("./PLclock") to lower the Zynq PL frequency to 100 MHz
 3. Load the FPGA configuration ("cat TDCsystem_wrapper.bit > /dev/xdevcfg")
