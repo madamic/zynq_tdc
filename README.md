@@ -28,7 +28,7 @@ Source files for creating a two-channel TDC system example project.
 Associated software for the TDC, including:\
 TDCServer2.c - a Linux-based C program for the Zynq ARM core, which communicates with the TDC channels via the "mmap" system call. Addresses are set in the Address Editor of the TDCsystem project.\
 PLclock script - contains bash commands for lowering the PL clock frequency from 125 to 100 MHz. Has to be executed before TDC implementation.\
-TDCgui3.mlapp - MATLAB App Designer graphical user interface application.
+TDCgui4.mlapp - MATLAB App Designer graphical user interface application.
 
 *figs*\
 Various figures and schematics of the TDC design.
