@@ -44,7 +44,7 @@ Source files for creating a two-channel TDC system example project.
 
 If you don't want to run these steps and create your own FPGA bitstream, you can use the one already provided in the *setup* folder.
 
-**Setup on the Red Pitaya STEMLab 125-10 or 125-14**
+**Setup on the Red Pitaya system (STEMLab 125-10 or 125-14)**
 1. Copy the contents of the *setup* folder (FPGA bitstream, PLclock script and C server) on the Red Pitaya system
 2. Run PLclock ("./PLclock") to lower the Zynq PL frequency to 100 MHz
 3. Load the FPGA configuration ("cat TDCsystem_wrapper.bit > /dev/xdevcfg")
