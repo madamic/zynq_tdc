@@ -51,7 +51,7 @@ If you don't want to run these steps and create your own FPGA bitstream, you can
 4. Compile and run the C server ("gcc -o TDCserver TDCserver2.c" and "./TDCserver")
 5. On a client PC, start the MATLAB GUI application in Matlab App Designer to connect to the TDC system
 
-TDC inputs are located on E1 extension connector pins 17 & 18 (connected to FPGA pins M14 & M15), voltage standard = LVCMOS33 (3,3 V). The TDCs are rising-edge sensitive, i.e. a timestamp is attributed to each 0->1 transition.
+TDC inputs are located on E1 extension connector pins 17 & 18 (connected to FPGA pins M14 & M15), voltage standard = LVCMOS33 (3,3 V). The TDCs are rising-edge sensitive, i.e. a timestamp is generated for each 0->1 transition.
 
 **Links**\
 IEEE paper: https://ieeexplore.ieee.org/abstract/document/8904850 \
