@@ -5,7 +5,7 @@ Tested on Red Pitaya STEMLab 125-10 and STEMLab 125-14
 Author: Michel Adamic ada.mic94@gmail.com
 
 **Performance**\
-Core frequency: 350 MHz\
+TDC core frequency: 350 MHz\
 No. of delay line taps: 192 (configurable)\
 Time resolution per channel: >11 ps\
 Accuracy: <10 ppm\
