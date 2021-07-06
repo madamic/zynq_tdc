@@ -1,5 +1,5 @@
 # ZYNQ Time-to-digital converter
-A fast high-resolution time-to-digital converter for the Red Pitaya Zynq-7010 SoC\
+###### A fast high-resolution time-to-digital converter for the Red Pitaya Zynq-7010 SoC\
 Tested on Red Pitaya STEMLab 125-10 and STEMLab 125-14
 
 Author: Michel Adamic ada.mic94@gmail.com
