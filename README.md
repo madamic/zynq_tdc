@@ -1,6 +1,6 @@
 # ZYNQ Time-to-digital converter
-A fast high-resolution time-to-digital converter for the Red Pitaya Zynq-7010 SoC
-Tested with Red Pitaya STEMLab 125-10 and STEMLab 125-14
+A fast high-resolution time-to-digital converter for the Red Pitaya Zynq-7010 SoC\
+Tested on Red Pitaya STEMLab 125-10 and STEMLab 125-14
 
 Author: Michel Adamic ada.mic94@gmail.com
 
@@ -22,29 +22,36 @@ TDC channel IP. Includes VHDL source files, test benches and customized Xilinx I
 *board*\
 Red Pitaya board definition files.
 
-*src*\
-Source files for creating a two-channel TDC system example project.
-
-*code*\
-Associated software for the TDC, including:\
-TDCServer2.c - a Linux-based C program for the Zynq ARM core, which communicates with the TDC channels via the "mmap" system call. Addresses are set in the Address Editor of the TDCsystem project.\
-PLclock script - contains bash commands for lowering the PL clock frequency from 125 to 100 MHz. Has to be executed before TDC implementation.\
-TDCgui4.mlapp - MATLAB App Designer graphical user interface application.
-
 *figs*\
 Various figures and schematics of the TDC design.
+
+*matlab*\
+TDCgui4.mlapp - MATLAB App Designer graphical user interface application.
+
+*setup*\
+Files required to run the TDC system on the Red Pitaya board.\
+TDCServer2.c - a Linux-based C program for the Zynq ARM core, which communicates with the TDC channels via the "mmap" system call. Addresses are set in the Address Editor of the TDCsystem project.\
+PLclock script - contains bash commands for lowering the PL clock frequency from 125 to 100 MHz. Has to be executed before TDC implementation.\
+TDCsystem_wrapper.bit - FPGA bitstream.
+
+*src*\
+Source files for creating a two-channel TDC system example project.
 
 **2-channel TDC system example project**
 1. Open Vivado 2018.2
 2. Using the Tcl Console, navigate to the "zynq_tdc/" folder and execute "source make_project.tcl"
 3. Complete the synthesis & implementation steps
 
-**Setup on the Red Pitaya**
-1. Copy the generated bitstream, PLclock script and C server on the Red Pitaya system
+If you don't want to run these steps and create your own FPGA bitstream, you can use the one already provided in the *setup* folder.
+
+**Setup on the Red Pitaya STEMLab 125-10 or 125-14**
+1. Copy the contents of the *setup* folder (FPGA bitstream, PLclock script and C server) on the Red Pitaya system
 2. Run PLclock ("./PLclock") to lower the Zynq PL frequency to 100 MHz
 3. Load the FPGA configuration ("cat TDCsystem_wrapper.bit > /dev/xdevcfg")
-4. Compile and run the C server ("gcc TDCserver2.c -o TDCserver.exe" and "./TDCserver")
-5. On a client PC, start the MATLAB GUI to connect to the TDC system
+4. Compile and run the C server ("gcc -o TDCserver TDCserver2.c" and "./TDCserver")
+5. On a client PC, start the MATLAB GUI application in Matlab App Designer to connect to the TDC system
+
+TDC inputs are located on E1 extension connector pins 17 & 18 (connected to FPGA pins M14 & M15), voltage standard = LVCMOS33 (3,3 V). The TDCs are rising-edge sensitive, i.e. a timestamp is attributed to each 0->1 transition.
 
 **Links**\
 IEEE paper: https://ieeexplore.ieee.org/abstract/document/8904850 \
