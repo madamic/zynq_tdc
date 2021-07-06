@@ -56,3 +56,4 @@ TDC inputs are located on E1 extension connector pins 17 & 18 (connected to FPGA
 **Links**\
 IEEE paper: https://ieeexplore.ieee.org/abstract/document/8904850 \
 My thesis (in Slovene): https://repozitorij.uni-lj.si/IzpisGradiva.php?id=117846&lang=eng
+Red Pitaya docs, schematics etc.: https://redpitaya.readthedocs.io/en/latest/
