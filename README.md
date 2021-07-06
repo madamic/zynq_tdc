@@ -25,13 +25,13 @@ Red Pitaya board definition files.
 *figs*\
 Various figures and schematics of the TDC design.
 
-*matlab*\
+*matlab*
 - TDCgui4.mlapp - MATLAB App Designer graphical user interface application.
 
 *setup*\
-Files required to run the TDC system on the Red Pitaya board.\
-- TDCServer2.c - a Linux-based C program for the Zynq ARM core, which communicates with the TDC channels via the "mmap" system call. Addresses are set in the Address Editor of the TDCsystem project.\
-- PLclock script - contains bash commands for lowering the PL clock frequency from 125 to 100 MHz. Has to be executed before TDC implementation.\
+Files required to run the TDC system on the Red Pitaya board.
+- TDCServer2.c - a Linux-based C program for the Zynq ARM core, which communicates with the TDC channels via the "mmap" system call. Addresses are set in the Address Editor of the TDCsystem project.
+- PLclock script - contains bash commands for lowering the PL clock frequency from 125 to 100 MHz. Has to be executed before TDC implementation.
 - TDCsystem_wrapper.bit - FPGA bitstream.
 
 *src*\
